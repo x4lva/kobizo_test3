@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+
+    <div class="wrapper">
+        <nav id="sidebar" class="bg-primary">
+            <div class="sidebar-header">
+                <ul class="nav flex-column text-white">
+                    <li class="nav-item text-white">
+                        <a class="nav-link active text-white" href="#"><i class="fab fa-reddit"></i>Reddit</a>
+                    </li>
+                    <li class="nav-item text-white">
+                        <a class="nav-link text-white" href="#">Link</a>
+                    </li>
+                    <li class="nav-item text-white">
+                        <a class="nav-link text-white" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content" class="position-relative">
+            <div class="flex-column justify-content-start align-items-start mb-3 mt-3 position-relative">
+                <div id="rss-container">
+                    <h1 class="text-uppercase">Habrahab</h1>
+                    <div class="list-group">
+                        <div id="loader" style="width: 3rem; height: 3rem;" class="spinner-grow text-primary position-relative top-50 start-50" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Redirect to article</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a target="_blank" class="btn bg-primary text-white" href="">Confirm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

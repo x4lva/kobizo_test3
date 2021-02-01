@@ -1,0 +1,35 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#sidebar {
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+#content{
+    width: 78%;
+    margin-left: 21%;
+    min-height: 100vh;
+}
+#content{
+    transition: all 0.3s;
+
+}
+#content.content-full{
+    margin-left: 0;
+}
+.list-group-item:hover{
+    cursor: pointer;
+}
+#rss-container{
+    height: 100%;
+}
