@@ -21,17 +21,4 @@ class HomeController extends BaseController
 
     }
 
-    /**
-     * @Route("/getreditrss", name="getreddit", methods={"GET"})
-     */
-    public function getReditRSS(){
-        $rss = simplexml_load_file('https://habr.com/en/rss/all/all/');
-
-
-        $response = new Response($rss->asXML());
-        $response->headers->set('Content-Type', 'xml');
-
-        return $response;
-
-    }
 }

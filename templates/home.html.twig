@@ -7,15 +7,18 @@
     <div class="wrapper">
         <nav id="sidebar" class="bg-primary">
             <div class="sidebar-header">
-                <ul class="nav flex-column text-white">
+                <ul class="nav flex-column text-white justify-content-center vh-100">
                     <li class="nav-item text-white">
-                        <a class="nav-link active text-white" href="#"><i class="fab fa-reddit"></i>Reddit</a>
+                        <a class="btn btn-primary rounded-0 w-100 ps-3 text-start" onclick="loadFeed('Habrahab')" href="#">Habrahab</a>
                     </li>
                     <li class="nav-item text-white">
-                        <a class="nav-link text-white" href="#">Link</a>
+                        <a class="btn btn-primary rounded-0 w-100 ps-3 text-start" onclick="loadFeed('BBC News')" href="#">BBC News</a>
                     </li>
                     <li class="nav-item text-white">
-                        <a class="nav-link text-white" href="#">Link</a>
+                        <a class="btn btn-primary rounded-0 w-100 ps-3 text-start" onclick="loadFeed('CNN')" href="#">CNN</a>
+                    </li>
+                    <li class="nav-item text-white">
+                        <a class="btn btn-primary rounded-0 w-100 ps-3 text-start" onclick="loadFeed('The Guardian')" href="#">The Guardian</a>
                     </li>
                 </ul>
             </div>
@@ -23,11 +26,12 @@
         <div id="content" class="position-relative">
             <div class="flex-column justify-content-start align-items-start mb-3 mt-3 position-relative">
                 <div id="rss-container">
-                    <h1 class="text-uppercase">Habrahab</h1>
+                    <h1 id="header" class="text-uppercase">Habrahab</h1>
+                    <div id="loader" style="width: 3rem; height: 3rem;" class="spinner-grow text-primary position-relative top-50 start-50 d-none" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                     <div class="list-group">
-                        <div id="loader" style="width: 3rem; height: 3rem;" class="spinner-grow text-primary position-relative top-50 start-50" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
+
                     </div>
                 </div>
             </div>
