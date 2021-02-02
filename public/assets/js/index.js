@@ -1,5 +1,9 @@
 
-loadFeed('Habrahab');
+
+
+loadFeed(window.location.href.split("#")[1].length==0 ? "habrahab" : window.location.href.split("#")[1]);
+
+console.log(window.location.href.split("#")[1].length==0 ? "habrahab" : window.location.href.split("#")[1]);
 
 function strip_html_tags(str) {
     if ((str === null) || (str === ''))
@@ -46,7 +50,7 @@ function loadFeed(from) {
 
     $("#rss-container .list-group").empty();
     $("#loader").toggleClass("d-none");
-    $("#header").text(from);
+    $("#header").text(from.replace("%20", " "));
 
     makeRequest(from);
 
