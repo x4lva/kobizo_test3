@@ -1,9 +1,4 @@
-
-
-
 loadFeed(window.location.href.split("#")[1].length==0 ? "habrahab" : window.location.href.split("#")[1]);
-
-console.log(window.location.href.split("#")[1].length==0 ? "habrahab" : window.location.href.split("#")[1]);
 
 function strip_html_tags(str) {
     if ((str === null) || (str === ''))
@@ -13,6 +8,7 @@ function strip_html_tags(str) {
     return str.replace(/<[^>]*>/g, '');
 }
 
+// Function for making request to server (We cannot access another domain in java-script queries)
 function makeRequest(url) {
     $.ajax(
         '/api/getrss/' + url, {
@@ -45,7 +41,7 @@ function makeRequest(url) {
 
 }
 
-
+// Function for onclick attribute
 function loadFeed(from) {
 
     $("#rss-container .list-group").empty();
@@ -56,6 +52,7 @@ function loadFeed(from) {
 
 }
 
+// Modal window init
 function postRedirect(url) {
     const myModal = new bootstrap.Modal(document.getElementById('myModal'));
     $(".modal-body a").attr("href", url);

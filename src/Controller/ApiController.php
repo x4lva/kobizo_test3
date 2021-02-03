@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApiController extends BaseController
 {
 
+
     /**
      * @Route("api/getrss/{resourse}")
      * @param String $resourse
@@ -19,6 +20,7 @@ class ApiController extends BaseController
 
         $url = "";
 
+        // Getting request url
         switch ($resourse){
             case 'Habrahab':
                 $url = "https://habr.com/en/rss/all/all/";

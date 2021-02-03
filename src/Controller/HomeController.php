@@ -16,6 +16,7 @@ class HomeController extends BaseController
     public function homePage(){
         $forRender = parent::renderDefault();
         $forRender["title"] = "Home Page";
+        
 
         return $this->render("home.html.twig", $forRender);
 
