@@ -1,4 +1,5 @@
-loadFeed(window.location.href.split("#")[1].length==0 ? "habrahab" : window.location.href.split("#")[1]);
+loadFeed(window.location.href.split("#")[1]==undefined ? "Habrahab" : window.location.href.split("#")[1]);
+
 
 function strip_html_tags(str) {
     if ((str === null) || (str === ''))
